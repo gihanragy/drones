@@ -15,7 +15,11 @@ public final class AppConstants {
     public static final String CONNECTION_REFUSED_ERROR_CODE = "1005";
 
 
-    public static final String TYPE_NOT_FOUND = "1001";
+    public static final String SERIAL_LENGTH_MIN_MAX = "1006";
+    public static final String WEIGHT_RANGE_ERROR_MESSAGE = "1007";
+    public static final String DRONE_MODEL_VALUE = "1008";
+    public static final String STATE_NOT_VALID = "1009";
+    public static final String SERIAL_NUMBER_ALREAY_REGISTERED = "1010";
 
 
     /**

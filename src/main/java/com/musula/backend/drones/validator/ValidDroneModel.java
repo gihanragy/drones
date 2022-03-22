@@ -10,14 +10,13 @@ import java.lang.annotation.Target;
 
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
-@Target(ElementType.TYPE)
+@Target(ElementType.FIELD)
 @Retention(RUNTIME)
 @Documented
-@Constraint(validatedBy = MatchValidator.class)
-public @interface Match {
-    String[] value();
+@Constraint(validatedBy = DroneModelValidator.class)
+public @interface ValidDroneModel {
 
-    String message() default "{Match.message}";
+    String message();
 
     Class<?>[] groups() default {};
 

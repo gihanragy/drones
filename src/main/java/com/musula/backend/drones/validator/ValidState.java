@@ -10,14 +10,13 @@ import java.lang.annotation.Target;
 
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
-@Target(ElementType.TYPE)
+@Target(ElementType.FIELD)
 @Retention(RUNTIME)
 @Documented
-@Constraint(validatedBy = NotMatchValidator.class)
-public @interface NotMatch {
-    String[] value();
+@Constraint(validatedBy = StateValidator.class)
+public @interface ValidState {
 
-    String message() default "{Match.message}";
+    String message() default "";
 
     Class<?>[] groups() default {};
 

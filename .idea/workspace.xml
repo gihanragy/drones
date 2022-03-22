@@ -4,75 +4,46 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="058bd6c0-ef38-4cac-a50a-09e09dd374a0" name="Default Changelist" comment="init new maven project">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/DroneApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/config/ApplicationConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/config/AsyncExecutor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/config/CustomAsyncExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/config/SchedulerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/config/SwaggerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/constant/AppConstants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/controller/DroneController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/converter/DroneConverters.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/dto/DroneCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/model/Drone.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/repository/DroneRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/service/DroneService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/service/DroneServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/validator/Match.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/validator/MatchValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/validator/NotMatch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/validator/NotMatchValidator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/util/BeanUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/util/MemoryUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/util/ModelMapperUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/util/ObjectMapperUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/util/ObjectUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/util/RestErrorHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/util/ServiceResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/util/exception/DroneBadRequestException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/util/exception/DroneConnectionException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/util/exception/DroneForbiddenException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/util/exception/DroneNotAuthorizedException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/util/exception/DroneNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/util/exception/ServiceException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/util/model/FieldErrorDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/util/model/ValidationErrorDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/util/repository/QueryDslPagingAndSortingRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__Drone_Data_insertion.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/logback-dev.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translation/messages.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/translation/messages_fr.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/musula/backend/alert/DroneControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/scripts/V1__Drone_Data_insertion.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/dto/MedicationCreator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/dto/MedicationDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/enums/DroneModelEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/enums/DroneStateEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/model/DroneHistory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/model/Medication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/validator/DroneModelValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/musula/backend/constant/AppConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/constant/AppConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/controller/DroneController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/controller/DroneController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/converter/DroneConverters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/converter/DroneConverters.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/dto/DroneCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/dto/DroneCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/model/Drone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/model/Drone.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/repository/DroneRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/repository/DroneRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/service/DroneService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/service/DroneService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/service/DroneServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/service/DroneServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/validator/Match.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/validator/ValidDroneModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/validator/MatchValidator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/validator/NotMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/validator/ValidState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/validator/NotMatchValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/musula/backend/drones/validator/StateValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/translation/messages.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/translation/messages.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -92,7 +63,6 @@
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ignore_missing_gitignore" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/pom.xml" />
     <property name="project.structure.last.edited" value="Project" />
@@ -100,6 +70,16 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.musula.backend.drones.dto" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.musula.backend.drones.model" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.musula.backend.drones.dto" />
+      <recent name="com.musula.backend.drones.model" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\drones\src\test\resources\scripts" />
     </key>
@@ -168,16 +148,54 @@
       <option name="presentableId" value="Default" />
       <updated>1647847241799</updated>
     </task>
+    <task id="LOCAL-00001" summary="init new maven project">
+      <created>1647936364366</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1647936364366</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="1">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="roots">
+                    <value>
+                      <list>
+                        <option value="$PROJECT_DIR$" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
         <entry key="MAIN">
           <value>
             <State />
           </value>
         </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="1" value="TOOL_WINDOW" />
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
@@ -195,10 +213,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="137" y="13" width="1092" height="715" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1647936168390" />
-    <state x="292" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1647935206803">
+    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser" timestamp="1647946258346">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="292" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1647935206803" />
+    <state x="488" y="70" key="#com.intellij.ide.util.MemberChooser/0.0.1366.728@0.0.1366.728" timestamp="1647946258346" />
+    <state x="413" y="139" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1647946175567">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="413" y="139" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1647946175567" />
+    <state x="463" y="232" width="442" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1647949628466">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="232" width="442" height="269" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1366.728@0.0.1366.728" timestamp="1647949628466" />
+    <state x="292" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1647966365028">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="292" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1366.728@0.0.1366.728" timestamp="1647966365028" />
     <state x="413" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1647859693511">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -207,25 +237,75 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1647936193761" />
-    <state width="1323" height="226" key="GridCell.Tab.0.bottom" timestamp="1647936217141">
+    <state width="1323" height="189" key="GridCell.Tab.0.bottom" timestamp="1647975599528">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="226" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1647936217141" />
-    <state width="1323" height="226" key="GridCell.Tab.0.center" timestamp="1647936217141">
+    <state width="1323" height="189" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1647975599528" />
+    <state width="1323" height="189" key="GridCell.Tab.0.center" timestamp="1647975599528">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="226" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1647936217141" />
-    <state width="1323" height="226" key="GridCell.Tab.0.left" timestamp="1647936217141">
+    <state width="1323" height="189" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1647975599528" />
+    <state width="1323" height="189" key="GridCell.Tab.0.left" timestamp="1647975599528">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="226" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1647936217141" />
-    <state width="1323" height="226" key="GridCell.Tab.0.right" timestamp="1647936217141">
+    <state width="1323" height="189" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1647975599528" />
+    <state width="1323" height="189" key="GridCell.Tab.0.right" timestamp="1647975599528">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="226" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1647936217141" />
+    <state width="1323" height="189" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1647975599528" />
+    <state width="1323" height="2" key="GridCell.Tab.1.bottom" timestamp="1647975245161">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="2" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1647975245161" />
+    <state width="1323" height="2" key="GridCell.Tab.1.center" timestamp="1647975245161">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="2" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1647975245161" />
+    <state width="1323" height="2" key="GridCell.Tab.1.left" timestamp="1647975245161">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="2" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1647975245161" />
+    <state width="1323" height="2" key="GridCell.Tab.1.right" timestamp="1647975245161">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="2" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1647975245161" />
+    <state x="275" y="83" key="Vcs.Push.Dialog.v2" timestamp="1647937056012">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="83" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1647937056012" />
     <state x="389" y="97" width="932" height="534" key="find.popup" timestamp="1647933760820">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="389" y="97" width="932" height="534" key="find.popup/0.0.1366.728@0.0.1366.728" timestamp="1647933760820" />
+    <state x="483" y="265" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1647936413043">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="483" y="265" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1366.728@0.0.1366.728" timestamp="1647936413043" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/musula/backend/util/RestErrorHandler.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/musula/backend/util/RestErrorHandler.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/musula/backend/drones/validator/DroneModelValidator.java</url>
+          <line>15</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/musula/backend/drones/controller/DroneController.java</url>
+          <line>37</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

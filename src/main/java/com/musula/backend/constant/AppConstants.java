@@ -25,6 +25,11 @@ public final class AppConstants {
     public static final String INVALID_MEDICATION_CODE = "1013";
     public static final String NOT_BLANCK_MEDICATION_CODE = "1014";
     public static final String INVALID_FILE_FORMAT = "1015";
+    public static final String DRONE_ID_NOT_FOUND = "1016";
+    public static final String MEDICATION_ID_NOT_FOUND = "1017";
+    public static final String DRONE_CANT_LOADED_IN_THIS_STATE = "1018";
+    public static final String DRONE_LOW_BATTERY = "1019";
+    public static final String TOTAL_WEIGHT_GREATER_THAN_ERROR = "1020";
 
 
     /**

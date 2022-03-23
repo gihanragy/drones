@@ -9,5 +9,5 @@ import java.util.List;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class TripCreater {
     private Integer droneId;
-    private List<Integer> medicationID;
+    private List<Integer> medicationIDList;
 }

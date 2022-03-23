@@ -2,6 +2,7 @@ package com.musula.backend.drones.controller;
 
 import com.musula.backend.drones.dto.DroneCreator;
 import com.musula.backend.drones.dto.MedicationCreator;
+import com.musula.backend.drones.dto.TripCreater;
 import com.musula.backend.drones.service.DroneService;
 import io.swagger.v3.oas.annotations.Operation;
 import org.modelmapper.ModelMapper;
@@ -20,12 +21,8 @@ import javax.validation.Valid;
 @RequestMapping("/api/v1/drone")
 public class DroneController {
 
-
     @Autowired
     DroneService droneService;
-
-
-
 
     @Operation(summary = "status = 403, message = Access Denied" + "\n"
             + "\n", description = "This API is used to register new drone")
@@ -42,8 +39,14 @@ public class DroneController {
     public ResponseEntity<?> createNewMedication(@Valid @ModelAttribute MedicationCreator input) {
         droneService.createMedication(input);
         return ResponseEntity.accepted().build();
-
     }
 
+    @Operation(summary = "status = 403, message = Access Denied" + "\n"
+            + "\n", description = "This API create new Medication")
+    @PostMapping(value = "/trip/")
+    public ResponseEntity<?> loadDroneWithItems(@Valid @RequestBody TripCreater tripCreater) {
+        droneService.loadDroneWithItems(tripCreater);
+        return ResponseEntity.accepted().build();
+    }
 
 }

@@ -3,19 +3,19 @@ package com.musula.backend.drones.service;
 
 import com.musula.backend.constant.AppConstants;
 import com.musula.backend.drones.converter.DroneConverters;
-import com.musula.backend.drones.dto.DroneCreator;
-import com.musula.backend.drones.dto.MedicationCreator;
-import com.musula.backend.drones.dto.MedicationDTO;
-import com.musula.backend.drones.dto.TripCreater;
+import com.musula.backend.drones.dto.*;
 import com.musula.backend.drones.enums.DroneStateEnum;
 import com.musula.backend.drones.model.Drone;
 import com.musula.backend.drones.model.Medication;
+import com.musula.backend.drones.model.QDrone;
 import com.musula.backend.drones.model.Trip;
 import com.musula.backend.drones.repository.DroneRepository;
 import com.musula.backend.drones.repository.MedicationRepository;
 import com.musula.backend.drones.repository.TripRepository;
 import com.musula.backend.util.exception.DroneBadRequestException;
 import com.musula.backend.util.exception.DroneNotFoundException;
+import com.querydsl.core.types.Predicate;
+import com.querydsl.core.types.dsl.Expressions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,31 +61,51 @@ public class DroneServiceImpl implements DroneService {
 
     @Override
     public Trip loadDroneWithItems(TripCreater tripCreater) {
-       Optional<Drone> droneOptional= droneRepository.findById(tripCreater.getDroneId());
-       if(!droneOptional.isPresent())
-           throw  new DroneNotFoundException(AppConstants.DRONE_ID_NOT_FOUND);
-       Drone drone = droneOptional.get();
-       if(drone.getState()!= DroneStateEnum.IDLE.getValue())
-           throw  new DroneBadRequestException(AppConstants.DRONE_CANT_LOADED_IN_THIS_STATE);
+        Optional<Drone> droneOptional = droneRepository.findById(tripCreater.getDroneId());
+        if (!droneOptional.isPresent())
+            throw new DroneNotFoundException(AppConstants.DRONE_ID_NOT_FOUND);
+        Drone drone = droneOptional.get();
+        if (drone.getState() != DroneStateEnum.IDLE.getValue())
+            throw new DroneBadRequestException(AppConstants.DRONE_CANT_LOADED_IN_THIS_STATE);
 
-        if(drone.getBatteryCapacity()<25)
-            throw  new DroneBadRequestException(AppConstants.DRONE_LOW_BATTERY);
-       Set<Medication> medicationSet=new HashSet<>();
-       float totalWeight=0;
+        if (drone.getBatteryCapacity() < 25)
+            throw new DroneBadRequestException(AppConstants.DRONE_LOW_BATTERY);
+        Set<Medication> medicationSet = new HashSet<>();
+        float totalWeight = 0;
         Trip trip = new Trip();
-       for(Integer medicationID:tripCreater.getMedicationIDList())
-       {
-           Medication medication = medicationRepository.findById(medicationID).orElseThrow(() -> new DroneNotFoundException(AppConstants.MEDICATION_ID_NOT_FOUND));
-           totalWeight+=medication.getWeight();
-           medicationSet.add(medication);
-           medication.setTrip(trip);
-       }
-       if(totalWeight>drone.getWeight())
-           throw new DroneBadRequestException(AppConstants.TOTAL_WEIGHT_GREATER_THAN_ERROR);
-       trip.setDrone(drone);
-       trip.setMedicationSet(medicationSet);
+        for (Integer medicationID : tripCreater.getMedicationIDList()) {
+            Medication medication = medicationRepository.findById(medicationID).orElseThrow(() -> new DroneNotFoundException(AppConstants.MEDICATION_ID_NOT_FOUND));
+            totalWeight += medication.getWeight();
+            medicationSet.add(medication);
+            medication.setTrip(trip);
+        }
+        if (totalWeight > drone.getWeight())
+            throw new DroneBadRequestException(AppConstants.TOTAL_WEIGHT_GREATER_THAN_ERROR);
+        trip.setDrone(drone);
+        trip.setMedicationSet(medicationSet);
         tripRepository.save(trip);
         return trip;
+    }
+
+    private Predicate getPredicate(DroneFilterInput droneFilterInput) {
+        Predicate predicate = Expressions.asBoolean(true).isTrue();
+        QDrone qDrone = QDrone.drone;
+        if (droneFilterInput.getDroneStateEnum() != null) {
+            predicate = qDrone.state.in(droneFilterInput.getDroneStateEnum() .getValue());
+        }
+        if (droneFilterInput.getBatteryLevel()!= null) {
+            predicate = qDrone.batteryCapacity.gt(droneFilterInput.getBatteryLevel());
+        }
+        return predicate;
+    }
+
+    @Override
+    public Iterable<Drone> getAllAvailable() {
+        DroneFilterInput droneFilterInput = new DroneFilterInput();
+        droneFilterInput.setDroneStateEnum(DroneStateEnum.IDLE);
+        droneFilterInput.setBatteryLevel(25f);
+        Predicate predicate = getPredicate(droneFilterInput);
+        return droneRepository.findAll(predicate);
     }
 
 

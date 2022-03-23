@@ -1,5 +1,6 @@
 package com.musula.backend.drones.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,18 +19,18 @@ import java.io.Serializable;
 @Getter
 @Setter
 public class Medication implements Serializable {
-
     @Id
-    @Column(name = "name")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String name;
-
-    @Column(name = "model")
-    private int model;
-
-    @Column(name = "weight")
+    private String code;
     private float weight;
 
     @Lob
-    @Column(name = "image")
     private byte[] image;
+
+    @OneToOne
+    @JoinColumn(name = "activeTripID")
+    @JsonBackReference
+    private Trip trip;
 }

@@ -12,6 +12,7 @@ import org.springframework.core.Ordered;
 import org.springframework.core.annotation.Order;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.BindException;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
 import org.springframework.validation.ObjectError;
@@ -48,6 +49,18 @@ public class RestErrorHandler {
                 .code(AppConstants.GENERAL_ERROR_CODE)
                 .build();
         return new ResponseEntity<>(serviceResponse, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @ExceptionHandler({BindException.class})
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ResponseBody
+    public ResponseEntity<?> processValidationError(BindException ex) {
+        BindingResult result = ex.getBindingResult();
+        List<ObjectError> objectErrors = result.getAllErrors();
+        ServiceResponse serviceResponse = ServiceResponse.builder()
+                .validationErrorDTO(processObjectErrors(objectErrors))
+                .build();
+        return ResponseEntity.badRequest().body(serviceResponse);
     }
 
     @ExceptionHandler({MethodArgumentNotValidException.class})

@@ -5,15 +5,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 
-/**
- * The Class User.
- */
 @Entity(name = "Drone")
 @Table(name = "Drone")
 @AllArgsConstructor
@@ -21,9 +16,10 @@ import java.io.Serializable;
 @Getter
 @Setter
 public class Drone implements Serializable {
-
     public int weight;
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String serialNumber;
     private Integer model;
     private Integer state;

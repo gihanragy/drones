@@ -25,7 +25,7 @@ public class SwaggerConfig {
         SpringDocUtils.getConfig().replaceWithClass(org.springframework.data.domain.Pageable.class,
                 org.springdoc.core.converters.models.Pageable.class);
         return new OpenAPI()
-                .info(new Info().title("Drone Portal API")
+                .info(new Info().title("Drone  API")
                         .description("APIs for Drone Backend")
                         .version("v0.0.1"));
     }

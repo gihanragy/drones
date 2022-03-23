@@ -20,29 +20,29 @@ import javax.validation.Valid;
 @RequestMapping("/api/v1/drone")
 public class DroneController {
 
-    /**
-     * The user service.
-     */
+
     @Autowired
     DroneService droneService;
 
 
-    @Autowired
-    ModelMapper modelMapper;
 
 
     @Operation(summary = "status = 403, message = Access Denied" + "\n"
             + "\n", description = "This API is used to register new drone")
     @PostMapping("/register")
-    public void register(@Valid @RequestBody DroneCreator droneCreator) {
+    public  ResponseEntity<?> register(@Valid @RequestBody DroneCreator droneCreator) {
         droneService.register(droneCreator);
+        return ResponseEntity.accepted().build();
+
     }
 
     @Operation(summary = "status = 403, message = Access Denied" + "\n"
             + "\n", description = "This API create new Medication")
     @PostMapping(value = "/medication/", consumes = {MediaType.MULTIPART_FORM_DATA_VALUE})
-    public ResponseEntity<?> createNewMedication(@ModelAttribute MedicationCreator input) {
-        return ResponseEntity.ok(droneService.createMedication(input));
+    public ResponseEntity<?> createNewMedication(@Valid @ModelAttribute MedicationCreator input) {
+        droneService.createMedication(input);
+        return ResponseEntity.accepted().build();
+
     }
 
 

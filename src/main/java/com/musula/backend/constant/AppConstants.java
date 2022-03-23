@@ -20,6 +20,11 @@ public final class AppConstants {
     public static final String DRONE_MODEL_VALUE = "1008";
     public static final String STATE_NOT_VALID = "1009";
     public static final String SERIAL_NUMBER_ALREAY_REGISTERED = "1010";
+    public static final String INVALID_MEDICATION_NAME = "1011";
+    public static final String NOT_BLANCK_MEDICATION_NAME = "1012";
+    public static final String INVALID_MEDICATION_CODE = "1013";
+    public static final String NOT_BLANCK_MEDICATION_CODE = "1014";
+    public static final String INVALID_FILE_FORMAT = "1015";
 
 
     /**

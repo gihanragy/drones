@@ -29,11 +29,8 @@ public class DroneControllerTest {
                 statusCode(200).
                 extract().body();
 
-             // Assertions.assertNotNull(list);
-          }
-
-
-
+        // Assertions.assertNotNull(list);
+    }
 
 
 }
